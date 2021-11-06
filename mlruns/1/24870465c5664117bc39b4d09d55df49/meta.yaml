@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyer/Bootcamp/Final_project/mlruns/1/24870465c5664117bc39b4d09d55df49/artifacts
+end_time: 1636170095311
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 24870465c5664117bc39b4d09d55df49
+run_uuid: 24870465c5664117bc39b4d09d55df49
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1636170095151
+status: 3
+tags: []
+user_id: boyer
