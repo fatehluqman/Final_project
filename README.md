@@ -1,3 +1,12 @@
+Deliverable One files:
+- database.ipynb : initial cleaning and load into PostgreSQL
+- deliverable 1-ML.ipynb : import from PostgreSQL into ML model
+- schena.sql : PostgreSQL table setup
+- nba_champ ERD.png : database tables
+- season_stats.csv : past season dataset
+- cy_stats.csv : current year dataset
+
+
 <p align="center">
 <img width="530" height="300" src="https://user-images.githubusercontent.com/74840026/140004825-00753ac5-3e41-482a-800c-8b792967c14b.png">                                                                  
 <h3 align="center">NBA Machine Learning Predictions</h3>
