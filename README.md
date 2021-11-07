@@ -12,7 +12,7 @@ Deliverable One files:
 <h3 align="center">NBA Machine Learning Predictions</h3>
 
   <p align="center">
-    Can we predict the winner of the 2022 NBA season using Machine Learning and Nerual Networks?
+    Can we predict the winner of the 2022 NBA season using Machine Learning?
 </p>
     
     
