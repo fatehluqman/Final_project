@@ -49,3 +49,26 @@ Even though our analysis will not go this deep, winning a championship goes beyo
 * With pandas we continue to clean the data frames including dropping unnecessary columns and updating column names to remove special characters
 * Finally in the database.ipynb a connection is built with the Postgres nba_champs database and the two datasets are loaded into individual tables.
 * A separate config.py file will be needed with the db_password variable the password for the database.
+
+# Exploring the data
+
+
+<p align="center">
+	Win/Lose Percentage over 32 seasons
+	<img src="https://user-images.githubusercontent.com/74840026/140628566-156afa7d-fe93-462f-8eee-aa7cdd1c1bea.png"
+</p>
+
+<p align="center">
+	Total Margin of victory over 32 seasons
+	<img src="https://user-images.githubusercontent.com/74840026/140628561-7d3d06c9-2627-43e7-b4d9-c401a75c17bd.png"
+</p>
+
+<p align="center">
+	Total Possessions per 48 minutes over 32 seasons
+	<img src="https://user-images.githubusercontent.com/74840026/140628563-a086c17e-2a50-4103-93e2-b4106cee1236.png"
+</p>
+
+<p align="center">
+	Three main features in dataset comparison
+	<img src="https://user-images.githubusercontent.com/74840026/140628568-1e720484-9acd-4022-9c9c-7ee4001f947c.png"
+</p>
