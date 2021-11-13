@@ -1,6 +1,6 @@
 Deliverable One files:
 - database.ipynb : initial cleaning and load into PostgreSQL
-- deliverable 1-ML.ipynb : import from PostgreSQL into ML model
+- LogReg_Model_11.10.21 : import from PostgreSQL into ML model
 - schena.sql : PostgreSQL table setup
 - nba_champ ERD.png : database tables
 - season_stats.csv : past season dataset
