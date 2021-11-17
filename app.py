@@ -19,8 +19,10 @@ def about():
 @app.route("/stats")
 def nba():
     connection = engine.connect()
-    connection.execute("SELECT * FROM cy_stats;")
+    query = connection.execute("SELECT * FROM cy_stats;")
+    obj = [{column: value for column, value in rowproxy.items()} for rowproxy in query]
     connection.close()
+    return jsonify(obj)
 
 if __name__ == '__main__':
     app.run()
