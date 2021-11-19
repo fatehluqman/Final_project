@@ -1,10 +1,5 @@
 Deliverable One files:
-- database.ipynb : initial cleaning and load into PostgreSQL
-- LogReg_Model_11.10.21 : import from PostgreSQL into ML model
-- schena.sql : PostgreSQL table setup
-- nba_champ ERD.png : database tables
-- season_stats.csv : past season dataset
-- cy_stats.csv : current year dataset
+
 
 
 <p align="center">
@@ -50,25 +45,69 @@ Even though our analysis will not go this deep, winning a championship goes beyo
 * Finally in the database.ipynb a connection is built with the Postgres nba_champs database and the two datasets are loaded into individual tables.
 * A separate config.py file will be needed with the db_password variable the password for the database.
 
-# Exploring the data
+# Machine Learning Model
+### Preliminary data preprocessing
+- Missing or null values were checked pre-database creation-none found
+- Import from PostgreSQL and read into data frame
+- Column’s ‘Season’ and ‘Name’ assigned to separate data frame for later use
+- Columns of no value dropped from data frame
+- Columns determined from feature exploration not needed dropped
+- Feature names were set as variable for later use
+- Data set split into train/test sets
+- Data scaled to normalize
+- Encoding was not used as all value-added data is numerical
+### Preliminary feature engineering and selection
+## Logistic Regression
+- Features were explored using coefficients, Recursive Feature Elimination (RFE) and Select from Model (SFM) methods for the Logistic Regression model.
+- All three methods produced lower accuracy results then using all features
+- All features used in model
+## Decision Tree
+- Features were ranked using model.feature_importances_
+- The bottom 11 features played no importance in the model outcome or accuracy
+- Top 6 features used in model
+## Random Forest
+- Features were ranked using model.feature_importances_
+- Only top 3 features were consistent when running the model
+- Top 3 features used in model
+### How data was split into training and test sets
+- Data was split using sk.learn train_test_split dependencies with the default 75/25 split
+### Explain model choice, including limitations and benefits
+- Supervised models were chosen due to the data having a label(‘Position’).
+## Logistic Regression
+- A logistic regression model analyzes the available data, and when presented with a new sample, mathematically determines its probability of belonging to a class. If the probability is above a certain cutoff point, the sample is assigned to that class. If the probability is less than the cutoff point, the sample is assigned to the other class.
+	- Limitations
+		- If the number of observations is lesser than the number of features, Logistic Regression should not be used, otherwise, it may lead to overfitting.
+		- The major limitation of Logistic Regression is the assumption of linearity between the dependent variable and the independent variables.
+	- Benefits
+		- Logistic regression is easier to implement, interpret, and very efficient to train.
+		- It makes no assumptions about distributions of classes in feature space.
+		- It can easily extend to multiple classes (multinomial regression) and a natural probabilistic view of class predictions.
+		- It is very fast at classifying unknown records.
+## Decision Tree
+- Decision trees are natural ways in which you can classify or label objects by asking a series of questions designed to zero in on the true answer. 
+	- Limitations
+		- A small change in the data can cause a large change in the structure of the decision tree causing instability.
+		- For a Decision tree sometimes, calculation can go far more complex compared to other algorithms.
+		- Decision tree often involves higher time to train the model.
+		- Decision tree training is relatively expensive as the complexity and time has taken are more.
+		- The Decision Tree algorithm is inadequate for applying regression and predicting continuous values.
+	- Benefits
+		- Compared to other algorithms decision trees requires less effort for data preparation during pre-processing.
+		- A decision tree does not require normalization of data.
+		- A decision tree does not require scaling of data as well.
+		- Missing values in the data also do NOT affect the process of building a decision tree to any considerable extent.
+		- A Decision tree model is very intuitive and easy to explain to technical teams as well as stakeholders.
+## Random Forest
+- Instead of having a single, complex tree like the ones created by decision trees, a random forest algorithm will sample the data and build several smaller, simpler decision trees. Each tree is simpler because it is built from a random subset of features. These simple trees are weak learners because they are created by randomly sampling the data and creating a decision tree for only that small portion of data. And since they are trained on a small piece of the original data, they are only slightly better than a random guess. However, many slightly better than average small decision trees can be combined to create a strong learner, which has much better decision-making power.
+	- Limitations
+		- Complexity: Random Forest creates a lot of trees (unlike only one tree in case of decision tree) and combines their outputs. By default, it creates 100 trees in Python sklearn library. To do so, this algorithm requires much more computational power and resources. On the other hand decision tree is simple and does not require so much computational resources.
+		- Longer Training Period: Random Forest require much more time to train as compared to decision trees as it generates a lot of trees (instead of one tree in case of decision tree) and makes decision on most votes.
+	- Benefits
+		- Are robust against overfitting as all those weak learners are trained on different pieces of the data.
+		- Can be used to rank the importance of input variables in a natural way.
+		- Can handle thousands of input variables without variable deletion.
+		- Are robust to outliers and nonlinear data.
+		- Run efficiently on large datasets.
 
 
-<p align="center">
-	Win/Lose Percentage over 32 seasons
-	<img src="https://user-images.githubusercontent.com/74840026/140628566-156afa7d-fe93-462f-8eee-aa7cdd1c1bea.png"
-</p>
 
-<p align="center">
-	Total Margin of victory over 32 seasons
-	<img src="https://user-images.githubusercontent.com/74840026/140628561-7d3d06c9-2627-43e7-b4d9-c401a75c17bd.png"
-</p>
-
-<p align="center">
-	Total Possessions per 48 minutes over 32 seasons
-	<img src="https://user-images.githubusercontent.com/74840026/140628563-a086c17e-2a50-4103-93e2-b4106cee1236.png"
-</p>
-
-<p align="center">
-	Three main features in dataset comparison
-	<img src="https://user-images.githubusercontent.com/74840026/140628568-1e720484-9acd-4022-9c9c-7ee4001f947c.png"
-</p>
