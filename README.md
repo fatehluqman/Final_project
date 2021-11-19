@@ -1,5 +1,15 @@
-Deliverable One files:
-
+Deliverable Two files:
+- Data files: 
+	- season_stats.csv
+	- cy_stats.csv
+	- cy_stats2.csv
+- Database connection: 
+	- database.ipynb
+	- database_load_nov15.ipynb
+- ML models:
+	- LogReg_model_11.10.21
+	- Decision_Tree_Model_11.10.21
+	- RF_Model_11.10.21
 
 
 <p align="center">
@@ -13,7 +23,7 @@ Deliverable One files:
     
 # Final_project
 
-* Based on the statistics of NBA Champions from past seasons, can we predict the winner of the current NBA Season (2021-22) using the teams current stats?
+<!-- * Based on the statistics of NBA Champions from past seasons, can we predict the winner of the current NBA Season (2021-22) using the teams current stats?
 * We chose this subject because of our interest in sports and in particular NBA.  Additionally, the use of statistics in sports has been evolving for years. For example, a basic box score with minutes played, points, rebounds and a few other stats was the standard, but now with improved technology performance can be broken down to individual players on individuals plays, which can show which kind of plays and where on the court a player has the most success scoring.
 Even though our analysis will not go this deep, winning a championship goes beyond the number of wins and losses a team has in the regular season. So we wanted to use a set of advance stats to see if we could predict a winner.
 
@@ -43,7 +53,25 @@ Even though our analysis will not go this deep, winning a championship goes beyo
 * database.ipynb file loads the two datasets season_stats and cy_stats into individual panda data frames. 
 * With pandas we continue to clean the data frames including dropping unnecessary columns and updating column names to remove special characters
 * Finally in the database.ipynb a connection is built with the Postgres nba_champs database and the two datasets are loaded into individual tables.
-* A separate config.py file will be needed with the db_password variable the password for the database.
+* A separate config.py file will be needed with the db_password variable the password for the database. -->
+
+## Project outline
+### Database
+- Data was scrapped from https://www.basketball-reference.com/ & https://stathead.com/basketball/, saved as .csv. (season_stats.csv, cy_stats.csv)
+- Datasets loaded into PostgreSQL database using python. (database_initial_load.ipynb)
+- Updated dataset scrapped and loaded into database. (cy_stats2.csv)
+- Column name changed inside database
+### Machine Learning Models
+- Data (season_stats.csv, cy_stats.csv) pulled from PostgreSQL, cleaned of non-value columns
+- Data (season_stats.csv) trained through ML model, feature importance explored
+- Features pruned
+- Data (cy_stats.csv) passed through ML model to predict target – ‘Position’
+### Tableau
+- Datasets (season_stats.csv, cy_stats.csv, cy_stats2.csv) loaded into Tableau
+- Storyboard created
+- Storyboard saved to Tableau public
+### Webpage
+- Project description, data exploration, ML methods, Tableau storyboard, and model predictions displayed through webpage.
 
 # Machine Learning Model
 ### Preliminary data preprocessing
