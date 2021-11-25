@@ -60,8 +60,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="1Home.html#sec-df2f" data-page-id="80299425" style="padding: 10px 12px;">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="1Home.html#carousel_fab6" data-page-id="80299425" style="padding: 10px 12px;">Tabluea Chart</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="1Home.html#sec-c072" data-page-id="80299425" style="padding: 10px 12px;">Machine Learning Models</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="1Home.html#sec-02d7" data-page-id="80299425" style="padding: 10px 12px;">Prediction timeline</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="1Home.html#sec-6c94" data-page-id="80299425" style="padding: 10px 12px;">Prediction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="1Home.html#sec-02d7" data-page-id="80299425" style="padding: 10px 12px;">Prediction</a>
 </li></ul>
               </div>
             </div>
@@ -81,8 +80,8 @@ borders: top right bottom left !important
               </div>
               <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
                 <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <h2 class="u-align-center u-text u-text-default u-text-1">Radom Forest Classifier</h2>
-                  <p class="u-align-center u-text u-text-2">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+                  <h2 class="u-align-center u-text u-text-default u-text-1">Random Forest Classifier</h2>
+                  <p class="u-align-center u-text u-text-2">A Random Forest is actually a bunch of decision trees bundled together(that's why it's called a forest).&nbsp; It is one of the most used algorithms, because of its simplicity and diversity.</p>
                   <a href="4Random-Forest.html#sec-073b" data-page-id="694605391" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
                 </div>
               </div>
@@ -95,9 +94,10 @@ borders: top right bottom left !important
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-1">
           <h1 style="text-align: center;">Random Forest Classification</h1>
-          <p style="text-align: center;">Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks that operates by constructing a multitude of decision trees at training time. For classification tasks, the output of the random forest is the class selected by most trees. For regression tasks, the mean or average prediction of the individual trees is returned. Random decision forests correct for decision trees' habit of overfitting to their training set.  Random forests generally outperform decision trees, but their accuracy is lower than gradient boosted trees. However, data characteristics can affect their performance. </p>
+          <p style="text-align: center;">Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks that operates by constructing a multitude of decision trees at training time. For classification tasks, the output of the random forest is the class selected by most trees. For regression tasks, the mean or average prediction of the individual trees is returned. Random decision forests correct for decision trees' habit of overfitting to their training set.  Random forests generally outperform decision trees, but their accuracy is lower than gradient boosted trees. However, data characteristics can affect their performance.</p>
+          <p style="text-align: center;">For our project, we will use a Random Forest Classifier.</p>
           <p style="text-align: center;">&nbsp;<span style="line-height: 2.0;">
-              <img src="../images/LRimport.png" align="center" style="width: 807px;" class="fr-dii fr-fic fr-fir" width="492.5">After cleaning is done to the datasets, they are both inserted into a PostgreSQL database. &nbsp;From there, we import them into our Model for training. 
+              <img src="../images/rf_import.png" align="center" style="width: 807px;" class="fr-dii fr-fic fr-fir" width="525">After cleaning is done to the datasets, they are both inserted into a PostgreSQL database. &nbsp;From there, we import them into our Model for training. 
             </span>
           </p>
         </div>
@@ -105,24 +105,39 @@ borders: top right bottom left !important
           <p style="text-align: center;">
             <br>
           </p>
-          <p style="text-align: center;">Unneeded features are dropped from the data sets. &nbsp;Since we are using 'Position' feature as our Binary target for this model, we assign 'Position' to the y variable. &nbsp;All other features are assigned to variable X. &nbsp;The data is them split into 4 groups. &nbsp;X_train, X_test, y_train, and y_test. &nbsp;These will be used to train and test the models accuracy. &nbsp;X_train and X_test are then scaled to normalize the data.</p>
+          <p style="text-align: center;">This model is set up the same as the Logistic Regression and Decision Tree model. &nbsp;Unneeded features are dropped, the 'Position' feature is set as the target, and the remaining features are assinged to the variable X. &nbsp;Then we will split the data into 4 groups, used to train and test the model.</p>
           <p style="text-align: center;">
             <span style="line-height: 2.0;">
-              <img src="../images/split_train_test.png" align="center" style="width: 547px;" class="fr-dib fr-fic" width="492.5">Our model is then created as 'classifier' and the training data is passed through. &nbsp;The model 'learns' which features from the X_train data that are most important in determining the outcome of our y_train feature, 'Position'.
+              <img src="../images/rf_split.png" align="center" style="width: 547px;" class="fr-dib fr-fic" width="492">The Random Forest model is a type of ensemble algorithm that builds a 'forest' of decisions trees, trained with the 'bagging' method. &nbsp;This method takes multiple samples of the training data and constructs models for each data sample, and each models predicitions are averaged to give a better estimate of the output value.
+            </span>
+          </p>
+          <p style="text-align: center;">
+            <span style="line-height: 2.0;">
+              <img src="../images/ForestofDecisionTrees.png" width="492" style="width: 805px;" class="fr-dib fr-fic">
             </span>
           </p>
         </div>
         <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-3">
-          <p style="text-align: center;">We will then score the data by passing the test sets through the model. &nbsp;This shows that by training our model with X_train and y_train, it is 97.86% accurate at choosing which binary outcome of feature 'Position' is determined.<span style="line-height: 2.0;">
-              <img src="../images/LRscore.png" align="center" style="width: 582px;" class="fr-dib fr-fic" width="492.5">
+          <p style="text-align: center;">We can find the accuracy score by passing the test sets through the model. &nbsp;This shows that by training our model with X_train and y_train, it is 97% accurate at choosing a correct outcome for the target 'Position'.<span style="line-height: 2.0;">
+              <img src="../images/rf_accuracy.png" align="center" style="width: 683px;" class="fr-dib fr-fic" width="374">
             </span>
           </p>
         </div>
         <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-4">
-          <p style="text-align: center;">The importance that the model has assinged to each feature can be charted out. &nbsp;This gives us a good idea of which features heavily influence the models prediction.<span style="line-height: 2.0;">
-              <img src="../images/LRfeature.png" align="center" style="width: 456px;" class="fr-dib fr-fic" width="492.5">&nbsp;
+          <p style="text-align: center;">
+            <span style="line-height: 2.0;">Defining feature importance was more of a challenge with the Random Forest model. &nbsp;The ranking of the features changed each time the model was reloaded and ran again. &nbsp;The top 3 features did stay consistent during each reload so we chose to remove the remaining features. &nbsp;Upon testing the accuracy score after the features were removed, it showed to drop the accuracy slightly. &nbsp;We then chose to include all features to give the model more data to train and 'learn' from.<img src="images/rf_feat_import.png" align="center" style="width: 456px;" class="fr-dib fr-fic" width="448">&nbsp;Once the team names and season features are set into their own dataframe, our model is ready for the current year stats to be passed through and give us a prediction. &nbsp;As with the Logistic and Decision models, the prediction outcome array is set to a dataframe and joined with the name dataframe.
             </span>
           </p>
+          <p style="text-align: center;">
+            <span style="line-height: 2.0;">
+              <img src="../images/rf_predct.png" width="492" style="width: 693px;" class="fr-dib fr-fic">
+            </span>
+          </p>
+          <p style="text-align: center;">
+            <br>
+          </p>
+          <h4>Head over to the Prediction Outcome section to see which&nbsp;</h4>
+          <h4>team the Random Forest model predicted to be the 2022 champs!</h4>
         </div>
       </div>
     </section>
@@ -152,7 +167,7 @@ borders: top right bottom left !important
                 <h3 class="u-align-center u-text u-text-default u-text-5">Prediction outcome</h3>
                 <p class="u-align-center u-text u-text-6">Skip straight to the prediction!<br>Whats your guess?
                 </p>
-                <a href="1Home.html#sec-6c94" data-page-id="80299425" class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3">Who wins?</a>
+                <a href="1Home.html#sec-02d7" data-page-id="80299425" class="u-active-none u-border-2 u-border-hover-palette-2-base u-border-palette-2-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3">Who wins?</a>
               </div>
             </div>
           </div>

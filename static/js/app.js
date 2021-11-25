@@ -11,7 +11,6 @@ const options = {
     onFirstInteraction: function() {
         workbook = viz.getWorkbook();
         activeSheet = workbook.getActiveSheet();
-        console.log("My dashboard is interactive");
     }
 };
 
@@ -23,3 +22,4 @@ function initViz() {
 
 // run the initViz function when the page loads
 document.addEventListener("DOMContentLoaded", initViz);
+
