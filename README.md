@@ -83,14 +83,17 @@ https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSoje
 - Features were explored using coefficients, Recursive Feature Elimination (RFE) and Select from Model (SFM) methods for the Logistic Regression model.
 - All three methods produced lower accuracy results then using all features
 - All features used in model
+- Model accuracy score: 0.9786
 ## Decision Tree
 - Features were ranked using model.feature_importances_
 - The bottom 11 features played no importance in the model outcome or accuracy
 - Top 6 features used in model
+- Model accuracy score: 0.9658
 ## Random Forest
 - Features were ranked using model.feature_importances_
 - Only top 3 features were consistent when running the model
 - Top 3 features used in model
+- Model accuracy score: 0.97
 ### How data was split into training and test sets
 - Data was split using sk.learn train_test_split dependencies with the default 75/25 split
 ### Explain model choice, including limitations and benefits
