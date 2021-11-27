@@ -79,6 +79,16 @@ https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSoje
 - Data scaled to normalize
 - Encoding was not used as all value-added data is numerical
 ### Preliminary feature engineering and selection
+- A heatmap was created to visualize the relationships between features
+![heatmap](https://user-images.githubusercontent.com/74840026/143719096-cf654501-97ea-4729-ad46-5854576b36b0.png)
+
+- Histograms to view where the data points lie within the ranges
+![Histograms](https://user-images.githubusercontent.com/74840026/143719020-bb53a9a1-626a-4a22-9d5d-e91a3203010a.png)
+
+- Density plots to show the distribution of the data
+![DPAFwLOGO](https://user-images.githubusercontent.com/74840026/143719111-7899449d-07bd-4ab8-a78d-7d3a3c5191ab.png)
+
+
 ## Logistic Regression
 - Features were explored using coefficients, Recursive Feature Elimination (RFE) and Select from Model (SFM) methods for the Logistic Regression model.
 - All three methods produced lower accuracy results then using all features
