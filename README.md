@@ -1,16 +1,3 @@
-Deliverable Two files:
-- Data files: 
-	- season_stats.csv
-	- cy_stats.csv
-	- cy_stats2.csv
-- Database connection: 
-	- database_initial_load.ipynb
-	- database_load_nov15.ipynb
-- ML models:
-	- LogReg_model_11.10.21
-	- Decision_Tree_Model_11.10.21
-	- RF_Model_11.10.21
-
 
 <p align="center">
 <!-- <img width="530" height="300" src="https://user-images.githubusercontent.com/74840026/140004825-00753ac5-3e41-482a-800c-8b792967c14b.png"> -->                             <img width="586" alt="webpage front" src="https://user-images.githubusercontent.com/74840026/142775760-152411c2-ccab-4981-be8a-6e9a7d0cc7d8.png">
@@ -26,7 +13,12 @@ Deliverable Two files:
 
 - Based on the statistics of NBA Champions from past seasons, can we predict the winner of the current NBA Season (2021-22) using the teams current stats?
 - We chose this subject because of our interest in sports and in particular NBA.  Additionally, the use of statistics in sports has been evolving for years. For example, a basic box score with minutes played, points, rebounds and a few other stats was the standard, but now with improved technology performance can be broken down to individual players on individuals plays, which can show which kind of plays and where on the court a player has the most success scoring.
-Even though our analysis will not go this deep, winning a championship goes beyond the number of wins and losses a team has in the regular season. So we wanted to use a set of advance stats to see if we could predict a winner.
+- Even though our analysis will not go this deep, winning a championship goes beyond the number of wins and losses a team has in the regular season. So we wanted to use a set of advance stats to see if we could predict a winner.
+
+## Summary
+- For a comparison of how our models stand up to reality, we used data from multiple sports betting odds sites.  
+- At the current time, our model is predicting within the top three odds winners from both betting sites.
+- View the webpage here: NBA Predictions
 
 # Project outline
 
