@@ -1,16 +1,3 @@
-Deliverable Two files:
-- Data files: 
-	- season_stats.csv
-	- cy_stats.csv
-	- cy_stats2.csv
-- Database connection: 
-	- database_initial_load.ipynb
-	- database_load_nov15.ipynb
-- ML models:
-	- LogReg_model_11.10.21
-	- Decision_Tree_Model_11.10.21
-	- RF_Model_11.10.21
-
 
 <p align="center">
 <!-- <img width="530" height="300" src="https://user-images.githubusercontent.com/74840026/140004825-00753ac5-3e41-482a-800c-8b792967c14b.png"> -->                             <img width="586" alt="webpage front" src="https://user-images.githubusercontent.com/74840026/142775760-152411c2-ccab-4981-be8a-6e9a7d0cc7d8.png">
@@ -26,7 +13,12 @@ Deliverable Two files:
 
 - Based on the statistics of NBA Champions from past seasons, can we predict the winner of the current NBA Season (2021-22) using the teams current stats?
 - We chose this subject because of our interest in sports and in particular NBA.  Additionally, the use of statistics in sports has been evolving for years. For example, a basic box score with minutes played, points, rebounds and a few other stats was the standard, but now with improved technology performance can be broken down to individual players on individuals plays, which can show which kind of plays and where on the court a player has the most success scoring.
-Even though our analysis will not go this deep, winning a championship goes beyond the number of wins and losses a team has in the regular season. So we wanted to use a set of advance stats to see if we could predict a winner.
+- Even though our analysis will not go this deep, winning a championship goes beyond the number of wins and losses a team has in the regular season. So we wanted to use a set of advance stats to see if we could predict a winner.
+
+## Summary
+- For a comparison of how our models stand up to reality, we used data from multiple sports betting odds sites.  
+- At the current time, our model is predicting within the top three odds winners from both betting sites.
+- View the webpage here: NBA Predictions
 
 # Project outline
 
@@ -79,18 +71,31 @@ https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSoje
 - Data scaled to normalize
 - Encoding was not used as all value-added data is numerical
 ### Preliminary feature engineering and selection
+- A heatmap was created to visualize the relationships between features
+![heatmap](https://user-images.githubusercontent.com/74840026/143719096-cf654501-97ea-4729-ad46-5854576b36b0.png)
+
+- Histograms to view where the data points lie within the ranges
+![Histograms](https://user-images.githubusercontent.com/74840026/143719020-bb53a9a1-626a-4a22-9d5d-e91a3203010a.png)
+
+- Density plots to show the distribution of the data
+![DPAFwLOGO](https://user-images.githubusercontent.com/74840026/143719111-7899449d-07bd-4ab8-a78d-7d3a3c5191ab.png)
+
+
 ## Logistic Regression
 - Features were explored using coefficients, Recursive Feature Elimination (RFE) and Select from Model (SFM) methods for the Logistic Regression model.
 - All three methods produced lower accuracy results then using all features
 - All features used in model
+- Model accuracy score: 0.9786
 ## Decision Tree
 - Features were ranked using model.feature_importances_
 - The bottom 11 features played no importance in the model outcome or accuracy
 - Top 6 features used in model
+- Model accuracy score: 0.9658
 ## Random Forest
 - Features were ranked using model.feature_importances_
 - Only top 3 features were consistent when running the model
 - Top 3 features used in model
+- Model accuracy score: 0.97
 ### How data was split into training and test sets
 - Data was split using sk.learn train_test_split dependencies with the default 75/25 split
 ### Explain model choice, including limitations and benefits
