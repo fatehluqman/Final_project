@@ -18,7 +18,7 @@
 ## Summary
 - For a comparison of how our models stand up to reality, we used data from multiple sports betting odds sites.  
 - At the current time, our model is predicting within the top three odds winners from both betting sites.
-- View the webpage here: NBA Predictions
+- View the webpage here: [NBA Predictions](https://boyerjason700.github.io/Final_project/)
 
 # Project outline
 
