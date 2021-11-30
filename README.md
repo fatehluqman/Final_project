@@ -150,5 +150,5 @@ https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSoje
 ## Challenges and what could have been done different
 ### Challenges
 - Feature exploration - understanding which method to use to find feature importance for each model 
-- Feature pruning - dropping features based on importance to find imfluence on model accuracy
+- Feature pruning - dropping features based on importance to find influence on model accuracy
 - HTML
