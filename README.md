@@ -13,8 +13,8 @@
 - View the webpage here: [NBA Predictions](https://boyerjason700.github.io/Final_project/)
 
 - Based on the statistics of NBA Champions from past seasons, can we predict the winner of the current NBA Season (2021-22) using the teams current stats?
-- We chose this subject because of our interest in sports and in particular NBA.  Additionally, the use of statistics in sports has been evolving for years. For example, a basic box score with minutes played, points, rebounds and a few other stats was the standard, but now with improved technology performance can be broken down to individual players on individuals plays, which can show which kind of plays and where on the court a player has the most success scoring.
-- Even though our analysis will not go this deep, winning a championship goes beyond the number of wins and losses a team has in the regular season. So we wanted to use a set of advance stats to see if we could predict a winner.
+- The use of statistics in sports has been evolving for years. For example, in NBA, a basic box score with minutes played, points, rebounds and a few other stats was the standard. But now we can go to NBA.com and not only see traditional stats but with improved technology, in-depth statistics are available down to individual players on different types of plays, or even for teams on how different lineup of players have performed. Other sites such as FiveThirtyEight have created their own unique rating systems for players and teams to gauge their performance.
+- We know that winning a championship goes beyond the number of wins and losses a team has in the regular season. So, for our project we used data available from basketball-reference.com to look at different advance stats for NBA teams over the past 30 years to train and test 3 different machine learning (ML) models, to see if we could predict a champion for the current season. Using our ML models, we will also be able to see what statistics had the most important, when determining a champion.
 
 
 # Project outline
@@ -23,26 +23,12 @@
 https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSojeR4M/edit?usp=sharing
 
 ### Database
-- Data was scrapped from https://www.basketball-reference.com/ & https://stathead.com/basketball/, saved as .csv. (season_stats.csv, cy_stats.csv)
+- Data was scrapped from https://www.basketball-reference.com/ & https://stathead.com/basketball/, saved as .csv. (season_stats.csv, cy_stats.csv, cy_stats2.csv, cy_stats3.csv)
+- Total of four tables, one for past years data(season_stats.csv) and three individuals tables for current year stats as we updated(cy_stats.csv, cy_stats2.csv, cy_stats3.csv)
 - Datasets loaded into PostgreSQL database using python. (database_initial_load.ipynb)
-- Updated dataset scrapped and loaded into database. (cy_stats2.csv)
+- Updated datasets saved as csv, cleaned and loaded into database. (database_load_nov15.ipynb, database_load_nov27.ipynb)
 - Column name changed inside database
-- Both datasets consist of the following columns: 
-	* Position: 1 for champions team for each year, 0 for non winners.
-	* Season: (yyyy-yy: 2020-21) 
-	* Tm: Team name as 3 letter city
-	* G: games
-	* W: Wins
-	* L: Losses
-	* W/L%: Win pct
-	* MOV: Margin of victory
-	* SOS: Strength of schedule
-	* SRS: Simple Rating System
-	* Pace: Possessions per 48 min
-	* ORtg: Offensive rating
-	* DRtg: Defensive rating
-	* Team eFG%,TS%,TOV%,ORB%,FT/FGA: 5 columns with team advance stats
-	* opp_eFG%,opp_TS%,opp_TOV%,opp_ORB%,opp_FT/FGA: 5 columns with opps advance stats
+- All 4 datasets consist of the same columns/features. This columns/features consisted of Win pct, Margin of victory, Pace, Offensive rating, Defensive rating plus five columns with team advance stats and another five with opponents advance stats
 - A separate config.py file will be needed with the db_password variable the password for the database
 ### Machine Learning Models
 - Data (season_stats.csv, cy_stats.csv) pulled from PostgreSQL, cleaned of non-value columns
