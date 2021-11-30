@@ -148,7 +148,13 @@ https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSoje
 - At the current time, our model is predicting within the top three odds winners from both betting sites.
 
 ## Challenges and what could have been done different
-### Challenges
+### Challenges 
+- Initially tried to scrap data from source, but had challenges with the way data was coming out. But source website had an option to copy to csv files, so used that option.
+- We had challenge embedding the two tableau storyboard, which may have been due also to the webpage template we were using.  Support pages from tableau were not enough, but we were able to find code through other web sources that we were able to modify for to use on our webpage.
 - Feature exploration - understanding which method to use to find feature importance for each model 
 - Feature pruning - dropping features based on importance to find influence on model accuracy
-- HTML
+
+### What would we do different next time
+- Our past data went back 30 years, to 1990 but this is an area that we could have done differently. The NBA over the past 30 years has evolved the way the game is played, in large part due to use of statistics which emphasized different aspect of the game and al due to rule changes the NBA implemented. We potentially could have looked at the last decade where the game was similar. This potentially could have had impact on feature importance and predictions.
+- Make a better plan for which models to use and find upfront the feature importance methods
+- Refactor HTML to make responsive to different screen size/mobile
