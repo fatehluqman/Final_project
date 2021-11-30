@@ -58,6 +58,17 @@ https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSoje
 - Storyboard saved to Tableau public
 ### Webpage
 - Project description, data exploration, ML methods, Tableau storyboard, and model predictions displayed through webpage.
+## Modules, Tools and Frameworks
+- Jupyter Notebook
+- Python
+- Pandas
+- sqlalchemy
+- scikit-Learn
+- matplotlib
+- seaborn
+- PostgreSQL
+- Tableau
+- HTML template [Nicepage](https://nicepage.com/)
 
 # Machine Learning Model
 ### Preliminary data preprocessing
