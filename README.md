@@ -10,15 +10,12 @@
     
     
 # Final_project
+- View the webpage here: [NBA Predictions](https://boyerjason700.github.io/Final_project/)
 
 - Based on the statistics of NBA Champions from past seasons, can we predict the winner of the current NBA Season (2021-22) using the teams current stats?
 - We chose this subject because of our interest in sports and in particular NBA.  Additionally, the use of statistics in sports has been evolving for years. For example, a basic box score with minutes played, points, rebounds and a few other stats was the standard, but now with improved technology performance can be broken down to individual players on individuals plays, which can show which kind of plays and where on the court a player has the most success scoring.
 - Even though our analysis will not go this deep, winning a championship goes beyond the number of wins and losses a team has in the regular season. So we wanted to use a set of advance stats to see if we could predict a winner.
 
-## Summary
-- For a comparison of how our models stand up to reality, we used data from multiple sports betting odds sites.  
-- At the current time, our model is predicting within the top three odds winners from both betting sites.
-- View the webpage here: [NBA Predictions](https://boyerjason700.github.io/Final_project/)
 
 # Project outline
 
@@ -146,6 +143,18 @@ https://docs.google.com/presentation/d/1MUrz3K_A001egy00IPCu7woaqPJDwUf6frhGSoje
 		- Can handle thousands of input variables without variable deletion.
 		- Are robust to outliers and nonlinear data.
 		- Run efficiently on large datasets.
+## Summary
+- For a comparison of how our models stand up to reality, we used data from multiple sports betting odds sites.  
+- At the current time, our model is predicting within the top three odds winners from both betting sites.
 
+## Challenges and what could have been done different
+### Challenges 
+- Initially tried to scrap data from source, but had challenges with the way data was coming out. But source website had an option to copy to csv files, so used that option.
+- We had challenge embedding the two tableau storyboard, which may have been due also to the webpage template we were using.  Support pages from tableau were not enough, but we were able to find code through other web sources that we were able to modify for to use on our webpage.
+- Feature exploration - understanding which method to use to find feature importance for each model 
+- Feature pruning - dropping features based on importance to find influence on model accuracy
 
-
+### What would we do different next time
+- Our past data went back 30 years, to 1990 but this is an area that we could have done differently. The NBA over the past 30 years has evolved the way the game is played, in large part due to use of statistics which emphasized different aspect of the game and al due to rule changes the NBA implemented. We potentially could have looked at the last decade where the game was similar. This potentially could have had impact on feature importance and predictions.
+- Make a better plan for which models to use and find upfront the feature importance methods
+- Refactor HTML to make responsive to different screen size/mobile
