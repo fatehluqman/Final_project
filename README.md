@@ -9,7 +9,7 @@
 </p>
     
     
-# Final_project
+# NBA Predictions
 - View the webpage here: [NBA Predictions](https://boyerjason700.github.io/Final_project/)
 
 - Based on the statistics of NBA Champions from past seasons, can we predict the winner of the current NBA Season (2021-22) using the teams current stats?
